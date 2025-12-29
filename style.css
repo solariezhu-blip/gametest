@@ -191,3 +191,35 @@ h1 {
   }
 }
 
+/* ===================== */
+/* 角色显示区域 */
+/* ===================== */
+
+#character-box {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+#character {
+  width: 160px;
+  max-width: 60%;
+  transition: transform 0.3s ease;
+}
+
+/* 喜悦时轻微跳动 */
+.character-happy {
+  animation: jump 0.4s ease;
+}
+
+/* 沮丧时下沉 */
+.character-sad {
+  transform: translateY(8px) scale(0.95);
+  opacity: 0.85;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
