@@ -1,5 +1,5 @@
 // =====================
-// 总题库（50 题）
+// 题库（50 题）
 // =====================
 const questionBank = [
   { question: "手机屏幕越大，一定越好用吗？", options: ["是的", "不一定", "完全没关系"], correctIndex: 1 },
@@ -7,44 +7,44 @@ const questionBank = [
   { question: "HTML 的主要作用是什么？", options: ["控制样式", "写逻辑", "搭建页面结构"], correctIndex: 2 },
   { question: "CSS 主要用于什么？", options: ["页面结构", "页面样式", "数据处理"], correctIndex: 1 },
   { question: "JavaScript 可以实现什么功能？", options: ["页面交互", "页面样式", "图片压缩"], correctIndex: 0 },
-  { question: "手机网页是否需要下载安装到手机？", options: ["需要", "不需要"], correctIndex: 1 },
-  { question: "刷新网页后，网页数据通常会？", options: ["保留", "重置"], correctIndex: 1 },
-  { question: "按钮点击效果属于哪一类功能？", options: ["交互逻辑", "页面结构"], correctIndex: 0 },
-  { question: "倒计时答题常用于什么场景？", options: ["活动互动", "文本阅读"], correctIndex: 0 },
-  { question: "以下哪项更适合门店互动？", options: ["长文字说明", "小游戏答题"], correctIndex: 1 },
+  { question: "手机网页是否需要下载安装？", options: ["需要", "不需要"], correctIndex: 1 },
+  { question: "刷新网页后，题目会？", options: ["不变", "重新随机"], correctIndex: 1 },
+  { question: "倒计时答题的作用是？", options: ["增加紧张感", "降低难度"], correctIndex: 0 },
+  { question: "手机优先设计更适合？", options: ["活动互动", "办公软件"], correctIndex: 0 },
+  { question: "网页是否可以扫码访问？", options: ["可以", "不可以"], correctIndex: 0 },
 
-  { question: "网页是否可以通过二维码打开？", options: ["不可以", "可以"], correctIndex: 1 },
-  { question: "手机优先设计通常是？", options: ["先做电脑", "先做手机"], correctIndex: 1 },
-  { question: "以下哪种是前端文件？", options: ["index.html", "data.sql"], correctIndex: 0 },
-  { question: "HTML 文件可以直接用浏览器打开吗？", options: ["可以", "不可以"], correctIndex: 0 },
-  { question: "以下哪种不是编程语言？", options: ["JavaScript", "HTML", "Photoshop"], correctIndex: 2 },
-  { question: "网页按钮一般使用什么标签？", options: ["button", "img"], correctIndex: 0 },
-  { question: "手机浏览器是否支持 JavaScript？", options: ["支持", "不支持"], correctIndex: 0 },
-  { question: "网页加载慢最影响什么？", options: ["用户体验", "手机电量"], correctIndex: 0 },
-  { question: "小游戏互动的主要目的是什么？", options: ["增加参与感", "减少停留"], correctIndex: 0 },
-  { question: "以下哪项不属于网页三要素？", options: ["HTML", "CSS", "Excel"], correctIndex: 2 },
+  { question: "按钮点击属于哪类功能？", options: ["交互", "装饰"], correctIndex: 0 },
+  { question: "HTML 文件能否直接用浏览器打开？", options: ["可以", "不可以"], correctIndex: 0 },
+  { question: "CSS 能控制动画吗？", options: ["能", "不能"], correctIndex: 0 },
+  { question: "JS 是否能控制图片切换？", options: ["能", "不能"], correctIndex: 0 },
+  { question: "答题小游戏是否适合门店活动？", options: ["适合", "不适合"], correctIndex: 0 },
+  { question: "题目随机的好处是？", options: ["防止重复", "增加加载"], correctIndex: 0 },
+  { question: "手机竖屏更符合？", options: ["单手操作", "横向阅读"], correctIndex: 0 },
+  { question: "答题后即时反馈的好处？", options: ["更有参与感", "更复杂"], correctIndex: 0 },
+  { question: "网页小游戏需要服务器吗？", options: ["不一定", "必须"], correctIndex: 0 },
+  { question: "结果页的作用是？", options: ["总结表现", "继续答题"], correctIndex: 0 },
 
-  { question: "点击后颜色变化通常由什么控制？", options: ["CSS", "HTML"], correctIndex: 0 },
-  { question: "网页可以适配不同尺寸手机吗？", options: ["不可以", "可以"], correctIndex: 1 },
-  { question: "网页小游戏是否需要联网？", options: ["必须", "不一定"], correctIndex: 1 },
-  { question: "手机竖屏设计更适合？", options: ["社交/互动", "Excel 编辑"], correctIndex: 0 },
-  { question: "以下哪种行为是用户交互？", options: ["点击按钮", "加载图片"], correctIndex: 0 },
-  { question: "网页文件通常存放在哪里？", options: ["文件夹", "相册"], correctIndex: 0 },
-  { question: "答题后立即反馈对错的好处是？", options: ["更有参与感", "增加难度"], correctIndex: 0 },
-  { question: "倒计时结束未答题通常判定为？", options: ["错误", "正确"], correctIndex: 0 },
-  { question: "以下哪项适合活动抽奖前环节？", options: ["答题小游戏", "说明文"], correctIndex: 0 },
-  { question: "网页是否可以长期使用？", options: ["可以", "不可以"], correctIndex: 0 },
+  { question: "选项按钮应不应该大？", options: ["应该", "不应该"], correctIndex: 0 },
+  { question: "答错时给反馈是否重要？", options: ["重要", "不重要"], correctIndex: 0 },
+  { question: "小游戏是否应该有角色？", options: ["应该", "不需要"], correctIndex: 0 },
+  { question: "角色表情能增强？", options: ["情绪代入", "加载速度"], correctIndex: 0 },
+  { question: "视觉反馈是否影响体验？", options: ["影响很大", "几乎不"], correctIndex: 0 },
+  { question: "倒计时结束未答算？", options: ["答错", "答对"], correctIndex: 0 },
+  { question: "活动页面推荐时长？", options: ["1-3 分钟", "30 分钟"], correctIndex: 0 },
+  { question: "小游戏更适合？", options: ["碎片时间", "长时间"], correctIndex: 0 },
+  { question: "按钮反馈能提升？", options: ["爽感", "复杂度"], correctIndex: 0 },
+  { question: "动画是否需要很复杂？", options: ["不需要", "必须"], correctIndex: 0 },
 
-  { question: "按钮禁用后还能点击吗？", options: ["能", "不能"], correctIndex: 1 },
-  { question: "题目随机的好处是？", options: ["防止重复", "增加加载时间"], correctIndex: 0 },
-  { question: "网页标题一般写在哪里？", options: ["title 标签", "body 标签"], correctIndex: 0 },
-  { question: "一个网页可以只有一个 HTML 文件吗？", options: ["可以", "不可以"], correctIndex: 0 },
-  { question: "手机端点击区域通常要？", options: ["大一些", "越小越好"], correctIndex: 0 },
-  { question: "以下哪项不影响用户体验？", options: ["加载速度", "是否好玩", "文件名"], correctIndex: 2 },
-  { question: "网页小游戏适合多长时间完成？", options: ["1-3 分钟", "30 分钟"], correctIndex: 0 },
-  { question: "活动互动页面的核心是？", options: ["参与感", "技术复杂度"], correctIndex: 0 },
-  { question: "手机网页是否支持震动反馈？", options: ["支持", "不支持"], correctIndex: 0 },
-  { question: "题目数量过多会导致？", options: ["疲劳", "更有趣"], correctIndex: 0 }
+  { question: "用户更喜欢？", options: ["有反馈", "无反馈"], correctIndex: 0 },
+  { question: "题目越多越好吗？", options: ["不一定", "一定"], correctIndex: 0 },
+  { question: "小游戏是否适合扫码？", options: ["适合", "不适合"], correctIndex: 0 },
+  { question: "角色可以代表？", options: ["引导者", "干扰"], correctIndex: 0 },
+  { question: "视觉统一是否重要？", options: ["重要", "不重要"], correctIndex: 0 },
+  { question: "动画应不应该打断流程？", options: ["不应该", "应该"], correctIndex: 0 },
+  { question: "失败反馈是否要明显？", options: ["要", "不要"], correctIndex: 0 },
+  { question: "正确反馈是否要爽？", options: ["要", "不要"], correctIndex: 0 },
+  { question: "小游戏的核心是？", options: ["体验", "技术"], correctIndex: 0 },
+  { question: "角色状态切换是否有用？", options: ["非常有用", "没用"], correctIndex: 0 }
 ];
 
 // =====================
@@ -72,6 +72,25 @@ const optionsEl = document.getElementById("options");
 const nextBtn = document.getElementById("next-btn");
 const scoreEl = document.getElementById("score");
 const timerEl = document.getElementById("timer");
+const characterEl = document.getElementById("character");
+
+// =====================
+// 角色状态控制
+// =====================
+function setCharacterNormal() {
+  characterEl.src = "images/hero_normal.png";
+  characterEl.className = "";
+}
+
+function setCharacterHappy() {
+  characterEl.src = "images/hero_happy.png";
+  characterEl.className = "character-happy";
+}
+
+function setCharacterSad() {
+  characterEl.src = "images/hero_sad.png";
+  characterEl.className = "character-sad";
+}
 
 // =====================
 // 倒计时
@@ -83,6 +102,7 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timeLeft--;
     timerEl.textContent = `剩余时间：${timeLeft} 秒`;
+
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
       timeUp();
@@ -93,6 +113,7 @@ function startTimer() {
 function timeUp() {
   if (answered) return;
   answered = true;
+  setCharacterSad();
 
   const correctIndex = questions[currentIndex].correctIndex;
   document.querySelectorAll(".option-btn").forEach((btn, i) => {
@@ -108,6 +129,7 @@ function timeUp() {
 // =====================
 function loadQuestion() {
   answered = false;
+  setCharacterNormal();
   nextBtn.style.display = "none";
   optionsEl.innerHTML = "";
 
@@ -132,7 +154,6 @@ function loadQuestion() {
 function selectAnswer(index) {
   if (answered) return;
   answered = true;
-
   clearInterval(timerInterval);
 
   const correctIndex = questions[currentIndex].correctIndex;
@@ -143,29 +164,24 @@ function selectAnswer(index) {
 
     if (i === correctIndex) {
       btn.classList.add("correct");
-
-      // ⭐ 答对时触发剑气斩断效果
       if (index === correctIndex) {
         btn.classList.add("cut-effect");
       }
-    } else if
- (i === index) {
-  btn.
-classList.add("wrong"
-);
-  btn.
-classList.add("wrong-impact"); // ⭐ 答错震开效果
-}
+    } else if (i === index) {
+      btn.classList.add("wrong", "wrong-impact");
+    }
   });
 
   if (index === correctIndex) {
     score++;
     scoreEl.textContent = `得分：${score}`;
+    setCharacterHappy();
+  } else {
+    setCharacterSad();
   }
 
   nextBtn.style.display = "block";
 }
-
 
 // =====================
 // 下一题 / 结果页
@@ -191,17 +207,24 @@ function showResult() {
   const percent = Math.round((score / total) * 100);
 
   let message = "💪 没关系，再试一次会更好！";
-  if (percent >= 80) message = "🎉 太棒了！你对内容非常了解！";
-  else if (percent >= 50) message = "👍 不错！再努力一点就更完美！";
+  if (percent >= 80) {
+    message = "🎉 太棒了！你是答题高手！";
+    setCharacterHappy();
+  } else if (percent >= 50) {
+    message = "👍 表现不错，再接再厉！";
+    setCharacterNormal();
+  } else {
+    setCharacterSad();
+  }
 
-  questionEl.innerHTML = "答题完成 🎉";
+  questionEl.textContent = "答题完成 🎉";
   optionsEl.innerHTML = `
     <div style="text-align:center; margin-top:20px;">
       <p>答对题数：<strong>${score} / ${total}</strong></p>
       <p>正确率：<strong>${percent}%</strong></p>
-      <p style="margin-top:15px;">${message}</p>
+      <p style="margin-top:12px;">${message}</p>
       <button onclick="location.reload()" style="
-        margin-top:20px;
+        margin-top:18px;
         padding:12px 20px;
         font-size:16px;
         border:none;
