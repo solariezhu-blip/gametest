@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简单答题小游戏</title>
+  <p id="timer">剩余时间：10 秒</p>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>答题小游戏</h1>
+
+    <div id="question-box">
+      <p id="question">问题加载中...</p>
+
+      <div id="options">
+        <!-- 选项由 JS 动态生成 -->
+      </div>
+    </div>
+
+    <button id="next-btn" onclick="nextQuestion()">下一题</button>
+
+    <p id="score">得分：0</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

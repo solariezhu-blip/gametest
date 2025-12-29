@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+#question {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+}
+
+.option-btn.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.option-btn.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+#next-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2196f3;
+  color: white;
+  margin-top: 10px;
+  display: none;
+}
+
+#score {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#timer {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff5722;
+  font-weight: bold;
+}
+
+
+/* ===================== */
+/* 剑气斩断效果 */
+/* ===================== */
+
+.option-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 剑气 */
+.option-btn.cut-effect::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.9),
+    transparent
+  );
+  transform: rotate(-20deg);
+  animation: swordSlash 0.4s ease-out forwards;
+  z-index: 3;
+}
+
+/* 被切开的上下两半 */
+.option-btn.cut-effect {
+  animation: cutSplit 0.5s ease-out forwards;
+}
+
+/* 剑气动画 */
+@keyframes swordSlash {
+  to {
+    left: 100%;
+  }
+}
+
+/* 断裂动画 */
+@keyframes cutSplit {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 45%,
+      0 55%
+    );
+    transform: scale(1.02);
+    opacity: 0.85;
+  }
+}
+
+/* ===================== */
+/* 答错：震开 + 冲击波 */
+/* ===================== */
+
+.option-btn.wrong-impact {
+  animation: wrongShake 0.45s ease-in-out forwards,
+             wrongScale 0.4s ease-out forwards;
+  background: linear-gradient(135deg, #ff5252, #ff1744);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 红色冲击波 */
+.option-btn.wrong-impact::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: shockWave 0.45s ease-out forwards;
+  z-index: 2;
+}
+
+/* 左右震动 */
+@keyframes wrongShake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-10px); }
+  30% { transform: translateX(10px); }
+  45% { transform: translateX(-8px); }
+  60% { transform: translateX(8px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+/* 被震开的缩放感 */
+@keyframes wrongScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.94); }
+  100% { transform: scale(1); }
+}
+
+/* 冲击波扩散 */
+@keyframes shockWave {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+  }
+  100% {
+    width: 280px;
+    height: 280px;
+    opacity: 0;
+  }
+}
+
