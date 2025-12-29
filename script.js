@@ -1,50 +1,135 @@
 // =====================
 // 题库（50 题）
 // =====================
-const questionBank = [
-  { question: "手机屏幕越大，一定越好用吗？", options: ["是的", "不一定", "完全没关系"], correctIndex: 1 },
-  { question: "网页小游戏可以在手机浏览器直接玩吗？", options: ["不可以", "可以", "只能在电脑"], correctIndex: 1 },
-  { question: "HTML 的主要作用是什么？", options: ["控制样式", "写逻辑", "搭建页面结构"], correctIndex: 2 },
-  { question: "CSS 主要用于什么？", options: ["页面结构", "页面样式", "数据处理"], correctIndex: 1 },
-  { question: "JavaScript 可以实现什么功能？", options: ["页面交互", "页面样式", "图片压缩"], correctIndex: 0 },
-  { question: "手机网页是否需要下载安装？", options: ["需要", "不需要"], correctIndex: 1 },
-  { question: "刷新网页后，题目会？", options: ["不变", "重新随机"], correctIndex: 1 },
-  { question: "倒计时答题的作用是？", options: ["增加紧张感", "降低难度"], correctIndex: 0 },
-  { question: "手机优先设计更适合？", options: ["活动互动", "办公软件"], correctIndex: 0 },
-  { question: "网页是否可以扫码访问？", options: ["可以", "不可以"], correctIndex: 0 },
+const
+ questionBank = [
+  { 
+question: "OPPO 是来自哪个国家的品牌？", options: ["中国", "韩国", "日本"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机主打的核心优势之一是？", options: ["拍照", "打印", "游戏主机"], correctIndex: 0
+ },
+  { 
+question: "OPPO Find 系列定位是？", options: ["旗舰系列", "入门系列", "老人机"], correctIndex: 0
+ },
+  { 
+question: "OPPO Reno 系列主要面向哪类用户？", options: ["追求影像与设计的用户", "仅打电话用户", "工业用户"], correctIndex: 0
+ },
+  { 
+question: "OPPO A 系列更适合？", options: ["日常实用与性价比用户", "专业摄影师", "电竞职业选手"], correctIndex: 0
+ },
 
-  { question: "按钮点击属于哪类功能？", options: ["交互", "装饰"], correctIndex: 0 },
-  { question: "HTML 文件能否直接用浏览器打开？", options: ["可以", "不可以"], correctIndex: 0 },
-  { question: "CSS 能控制动画吗？", options: ["能", "不能"], correctIndex: 0 },
-  { question: "JS 是否能控制图片切换？", options: ["能", "不能"], correctIndex: 0 },
-  { question: "答题小游戏是否适合门店活动？", options: ["适合", "不适合"], correctIndex: 0 },
-  { question: "题目随机的好处是？", options: ["防止重复", "增加加载"], correctIndex: 0 },
-  { question: "手机竖屏更符合？", options: ["单手操作", "横向阅读"], correctIndex: 0 },
-  { question: "答题后即时反馈的好处？", options: ["更有参与感", "更复杂"], correctIndex: 0 },
-  { question: "网页小游戏需要服务器吗？", options: ["不一定", "必须"], correctIndex: 0 },
-  { question: "结果页的作用是？", options: ["总结表现", "继续答题"], correctIndex: 0 },
+  { 
+question: "OPPO 手机常见的快充技术是？", options: ["VOOC 闪充", "MagSafe", "QC"], correctIndex: 0
+ },
+  { 
+question: "VOOC 闪充的特点是？", options: ["充电速度快且稳定", "只能慢充", "只能无线充"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否支持大功率快充？", options: ["支持", "不支持"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机在充电时是否注重安全？", options: ["非常注重", "不太在意"], correctIndex: 0
+ },
+  { 
+question: "OPPO 的快充技术适合哪种场景？", options: ["碎片化时间充电", "整夜慢充"], correctIndex: 0
+ },
 
-  { question: "选项按钮应不应该大？", options: ["应该", "不应该"], correctIndex: 0 },
-  { question: "答错时给反馈是否重要？", options: ["重要", "不重要"], correctIndex: 0 },
-  { question: "小游戏是否应该有角色？", options: ["应该", "不需要"], correctIndex: 0 },
-  { question: "角色表情能增强？", options: ["情绪代入", "加载速度"], correctIndex: 0 },
-  { question: "视觉反馈是否影响体验？", options: ["影响很大", "几乎不"], correctIndex: 0 },
-  { question: "倒计时结束未答算？", options: ["答错", "答对"], correctIndex: 0 },
-  { question: "活动页面推荐时长？", options: ["1-3 分钟", "30 分钟"], correctIndex: 0 },
-  { question: "小游戏更适合？", options: ["碎片时间", "长时间"], correctIndex: 0 },
-  { question: "按钮反馈能提升？", options: ["爽感", "复杂度"], correctIndex: 0 },
-  { question: "动画是否需要很复杂？", options: ["不需要", "必须"], correctIndex: 0 },
+  { 
+question: "OPPO 在影像方面的优势包括？", options: ["人像与夜景", "传真功能", "扫描文件"], correctIndex: 0
+ },
+  { 
+question: "OPPO 人像拍照通常强调？", options: ["自然肤色与虚化", "过度美颜", "黑白照片"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否重视视频拍摄体验？", options: ["是的", "不是"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机常见的拍照场景是？", options: ["日常生活记录", "专业电影制作"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机适合拍摄哪类内容？", options: ["人物与生活瞬间", "仅文档"], correctIndex: 0
+ },
 
-  { question: "用户更喜欢？", options: ["有反馈", "无反馈"], correctIndex: 0 },
-  { question: "题目越多越好吗？", options: ["不一定", "一定"], correctIndex: 0 },
-  { question: "小游戏是否适合扫码？", options: ["适合", "不适合"], correctIndex: 0 },
-  { question: "角色可以代表？", options: ["引导者", "干扰"], correctIndex: 0 },
-  { question: "视觉统一是否重要？", options: ["重要", "不重要"], correctIndex: 0 },
-  { question: "动画应不应该打断流程？", options: ["不应该", "应该"], correctIndex: 0 },
-  { question: "失败反馈是否要明显？", options: ["要", "不要"], correctIndex: 0 },
-  { question: "正确反馈是否要爽？", options: ["要", "不要"], correctIndex: 0 },
-  { question: "小游戏的核心是？", options: ["体验", "技术"], correctIndex: 0 },
-  { question: "角色状态切换是否有用？", options: ["非常有用", "没用"], correctIndex: 0 }
+  { 
+question: "OPPO 手机使用的系统是？", options: ["ColorOS", "iOS", "HarmonyOS"], correctIndex: 0
+ },
+  { 
+question: "ColorOS 的特点是？", options: ["流畅、易用、人性化", "复杂难用", "只能英文"], correctIndex: 0
+ },
+  { 
+question: "ColorOS 是否适合新用户？", options: ["非常适合", "不适合"], correctIndex: 0
+ },
+  { 
+question: "OPPO 系统是否支持手势操作？", options: ["支持", "不支持"], correctIndex: 0
+ },
+  { 
+question: "ColorOS 是否注重隐私保护？", options: ["注重", "不注重"], correctIndex: 0
+ },
+
+  { 
+question: "OPPO 是否在全球多个国家销售？", options: ["是的", "只在一个国家"], correctIndex: 0
+ },
+  { 
+question: "OPPO 在东南亚市场表现如何？", options: ["非常活跃", "几乎没有"], correctIndex: 0
+ },
+  { 
+question: "OPPO 门店的主要作用是？", options: ["体验产品与服务", "只看广告"], correctIndex: 0
+ },
+  { 
+question: "在 OPPO 门店可以做什么？", options: ["体验拍照与功能", "只能买配件"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否提供线下售后支持？", options: ["提供", "不提供"], correctIndex: 0
+ },
+
+  { 
+question: "OPPO 手机是否适合年轻用户？", options: ["适合", "不适合"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否注重手机外观设计？", options: ["非常注重", "不注重"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机的颜色设计通常？", options: ["时尚多样", "只有黑色"], correctIndex: 0
+ },
+  { 
+question: "OPPO Reno 系列常见卖点是？", options: ["轻薄与影像", "厚重机身"], correctIndex: 0
+ },
+  { 
+question: "OPPO Find 系列常见卖点是？", options: ["高端配置与创新", "低性能"], correctIndex: 0
+ },
+
+  { 
+question: "OPPO 手机是否适合日常社交使用？", options: ["非常适合", "不适合"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否持续推出新技术？", options: ["是的", "不是"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否重视用户体验？", options: ["非常重视", "不在意"], correctIndex: 0
+ },
+  { 
+question: "OPPO 的品牌形象更偏向？", options: ["年轻与科技感", "传统保守"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否适合第一次换智能手机的用户？", options: ["适合", "不适合"], correctIndex: 0
+ },
+
+  { 
+question: "OPPO 手机是否支持多种价位选择？", options: ["支持", "不支持"], correctIndex: 0
+ },
+  { 
+question: "OPPO A 系列更注重？", options: ["实用与续航", "奢侈设计"], correctIndex: 0
+ },
+  { 
+question: "OPPO 手机是否适合家庭用户？", options: ["适合", "不适合"], correctIndex: 0
+ },
+  { 
+question: "OPPO 是否提供官方配件？", options: ["提供", "不提供"], correctIndex: 0
+ },
+  { 
+question: "OPPO 品牌更希望用户感受到？", options: ["科技让生活更美好", "复杂难用"], correctIndex: 0
+ }
 ];
 
 // =====================
@@ -238,4 +323,5 @@ function showResult() {
 
 // 初始化
 loadQuestion();
+
 
